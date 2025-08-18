@@ -3,9 +3,9 @@ package model.service;
 import model.Food;
 
 public class ShoppingCart {
-    Food[] foods;
+    private Food[] foods;
 
-    public ShoppingCart(Food[] foods) {
+     public ShoppingCart(Food[] foods) {
         this.foods = foods;
     }
 

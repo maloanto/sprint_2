@@ -2,8 +2,11 @@ package model;
 
 import model.contants.Color;
 
-public class Apple extends Food implements Discountable{
+public class Apple extends Food {
     private final Color color;
+    private final double DISCOUNT_FOR_RED_APPLE = 0.60;
+    private final double WITHOUT_DISCOUNT = 0.0;
+
 
     public Apple(int amount, double price, Color color) {
         super.amount = amount;
@@ -14,11 +17,7 @@ public class Apple extends Food implements Discountable{
 
     @Override
     public double getDiscount() {
-        if (color.equals(Color.RED)) {
-            return 0.60;
-        } else {
-            return 0;
-        }
+        return color.equals(Color.RED) ? DISCOUNT_FOR_RED_APPLE : WITHOUT_DISCOUNT;
     }
 
     @Override

@@ -14,14 +14,10 @@ public class Main {
 
         ShoppingCart shoppingCart = new ShoppingCart(foods);
 
-        System.out.println("Общая сумма за продукты: ");
-        System.out.println(shoppingCart.getPriceAllProductWithoutDiscount());
+        System.out.printf("Общая сумма за продукты: %s%n",  shoppingCart.getPriceAllProductWithoutDiscount());
 
-        System.out.println("Сумма за продукты со скидками: ");
-        System.out.println(shoppingCart.getPriceWithDiscount());
+        System.out.printf("Сумма за продукты со скидками: %s%n", shoppingCart.getPriceWithDiscount());
 
-
-        System.out.println("Сумма за веганские продукты: ");
-        System.out.println(shoppingCart.getVegetableFoodsPrice());
+        System.out.printf("Сумма за веганские продукты: %s%n", shoppingCart.getVegetableFoodsPrice());
     }
 }
