@@ -23,6 +23,4 @@ public class Meat extends Food {
         double discount = getDiscount();
         return super.price * super.amount * (1 - discount);
     }
-
-
 }
