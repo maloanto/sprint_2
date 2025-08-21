@@ -5,7 +5,7 @@ import model.contants.Discount;
 
 public class Apple extends Food {
     private final Color color;
-    private final Discount discount = new Discount();
+
 
     public Apple(int amount, double price, Color color) {
         super.amount = amount;
@@ -16,7 +16,7 @@ public class Apple extends Food {
 
     @Override
     public double getDiscount() {
-        return color.equals(Color.RED) ? discount.discountForRedApple : discount.withoutDiscount;
+        return color.equals(Color.RED) ? Discount.DISCOUNT_FOR_RED_APPLE : Discount.WITHOUT_DISCOUNT;
     }
 
     @Override
